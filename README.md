@@ -1,8 +1,8 @@
 # A simple but complete ELK setup
 
-Just one ELK node, with IP address ``192.168.33.200``.
+__Just one ELK node__, with IP address ``192.168.33.200``.
 
-Kibana app is published on http://192.168.33.200
+__Kibana__ app is published on http://192.168.33.200
 
 ## Prerequisites
 
@@ -34,3 +34,6 @@ or, if you are not behind a proxy (you lucky guy!), just put
 ```
 proxy: false
 ```
+
+### Logstash
+Logstash syslog port is set to 5014
