@@ -1,21 +1,19 @@
-# Infrastruttura di prova ELK
+# A simple but complete ELK setup
 
-Setup di una infrastruttura completa ELK:
+Just one ELK node, with IP address ``192.168.33.200``.
 
-- 1 nodo ELK
+Kibana app is published on http://192.168.33.200
 
-Indirizzi IP delle macchine:
+## Prerequisites
 
-- nodo ELK:       192.168.33.200
+1. [VirtualBox](https://www.virtualbox.org/)
+2. [Vagrant](https://www.vagrantup.com/) >= 1.8.*
 
-- Interfaccia Kibana:       `http://192.168.33.200`
+### Required vagrant plugins
 
-## Requisiti
-
-2. [VirtualBox](https://www.virtualbox.org/)
-3. [Vagrant](https://www.vagrantup.com/) >= 1.8.*
-
-Plugin vagrant
+* vagrant-berkshelf
+* vagrant-proxyconf
+* vagrant-cachier _(this in optional BTW)_
 
 ```
 vagrant plugin install vagrant-berkshelf
@@ -23,23 +21,16 @@ vagrant plugin install vagrant-proxyconf
 vagrant plugin install vagrant-cachier
 ```
 
-## Configurazione
+## Configuration
+Put a file named ``.config.yml`` into the root of the project and add there your proxy configuration
 
-Creare il file .config.yml e aggiungere la propria configurazione proxy
-
-es.
+e.g.
 ```
-proxy: http://proxy.paros.local:1080
+proxy: http://proxy.something.local:1080
 ```
 
-se non si usa nessun proxy aggiungere
+or, if you are not behind a proxy (you lucky guy!), just put
 
 ```
 proxy: false
-```
-
-## Avvio dell'intera infrastruttura
-
-```
-$ vagrant up
 ```
