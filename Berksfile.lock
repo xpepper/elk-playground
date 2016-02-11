@@ -1,0 +1,30 @@
+DEPENDENCIES
+  elk
+    path: cookbooks/elk
+
+GRAPH
+  apt (2.9.2)
+  ark (1.0.0)
+    build-essential (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  build-essential (2.2.4)
+  chef-sugar (3.3.0)
+  chef_handler (1.2.0)
+  elasticsearch (2.1.1)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+    yum (>= 0.0.0)
+  elk (0.1.0)
+    elasticsearch (~> 2.1.1)
+    java (>= 0.0.0)
+    tar (~> 0.7.0)
+  java (1.39.0)
+    apt (>= 0.0.0)
+  seven_zip (1.0.4)
+    windows (>= 1.2.2)
+  tar (0.7.0)
+  windows (1.39.1)
+    chef_handler (>= 0.0.0)
+  yum (3.10.0)

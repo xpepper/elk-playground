@@ -1,0 +1,13 @@
+input {
+  beats {
+    port => 5044
+    type => "logs"
+  }
+  syslog {
+    port => <%= @syslog_port %>
+    add_field => {
+      "[@metadata][beat]" => "logstash"
+      "[@metadata][type]" => "syslog"
+    }
+  }
+}

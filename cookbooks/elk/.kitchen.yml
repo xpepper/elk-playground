@@ -1,0 +1,24 @@
+<%
+  require './config.rb'
+%>
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  http_proxy: <%= custom_config['proxy'] %>
+  https_proxy: <%= custom_config['proxy'] %>
+  client_rb:
+    file_cache_path: '/var/chef/cache'
+
+platforms:
+  - name: bento/centos-7.1
+    driver:
+      vagrantfile_erb: Vagrantfile
+
+suites:
+  - name: default
+    run_list:
+      - recipe[elk::default]
+    attributes:
