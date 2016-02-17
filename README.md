@@ -8,6 +8,7 @@ __Kibana__ app is published on http://192.168.33.200
 
 1. [VirtualBox](https://www.virtualbox.org/)
 2. [Vagrant](https://www.vagrantup.com/) >= 1.8.*
+3. [Chef-DK](https://downloads.chef.io/chef-dk/) >= 0.10.*
 
 ### Required vagrant plugins
 
@@ -26,7 +27,7 @@ Put a file named ``.config.yml`` into the root of the project and add there your
 
 e.g.
 ```
-proxy: http://proxy.something.local:1080
+proxy: https://proxy.something.local:1080
 ```
 
 or, if you are not behind a proxy (you lucky guy!), just put
